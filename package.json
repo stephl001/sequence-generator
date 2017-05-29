@@ -1,0 +1,24 @@
+{
+  "name": "incrementor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stephl001/sequence-generator.git"
+  },
+  "author": "Stephane Larocque",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stephl001/sequence-generator/issues"
+  },
+  "homepage": "https://github.com/stephl001/sequence-generator#readme",
+  "dependencies": {
+    "express": "^4.15.3",
+    "lodash": "^4.17.4"
+  }
+}
