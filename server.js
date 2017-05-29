@@ -15,7 +15,8 @@ app.get('/sequence/:id', function (req, res) {
   res.send({value: currentValue});
 });
 
-var port = 8080;
-app.listen(port, function() {
-    console.log(`Sequence Increment Started. Port: ${port}`);
+var port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080,
+    host   = process.env.IP   || process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0';
+app.listen(port, host, function() {
+    console.log(`Sequence Increment Started. IP: ${host}, Port: ${port}`);
 });
