@@ -15,8 +15,7 @@ app.get('/sequence/:id', function (req, res) {
   res.send({value: currentValue});
 });
 
-var ipaddress = process.env.OPENSHIFT_NODEJS_IP || "127.0.0.1";
-var port = process.env.OPENSHIFT_NODEJS_PORT || 8080;
-app.listen(port, ipaddress, function() {
-    console.log(`Sequence Increment Started. Ip: ${ipaddress}, Port: ${port}`);
+var port = 8080;
+app.listen(port, function() {
+    console.log(`Sequence Increment Started. Port: ${port}`);
 });
